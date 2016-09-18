@@ -1,0 +1,7 @@
+# Problem 1: Searching an Array
+
+One of the most common problems in programming is to search an array for a particular value.
+
+For problem 1, you are given a fixed array of unique integers, called data, and you read in a single integer to search for.
+
+If the value that you read is contained in the array, then output the index of it in the array. If it is not contained in the array, then output -1.
