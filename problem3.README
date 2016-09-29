@@ -59,57 +59,61 @@ So, the line of best fit is: `y = 1.5000 * x - 0.1667`
 
 
 # Example Inputs and Outputs
-Your code will read in an array of integers, followed by a non-integer so the code knows when the array ends. This has already been done for you. Then, your code will compute the balance point, if there is one. Finally, your code will output either the balance point, or -1, if there is no balance point.
+Your code will read in an array of doubles for the X data, followed by a non-double so the code knows when the array ends. 
+Then it will read in an array of doubles for the Y data, followed by a non-double so the code knows when the array ends.
+The X data array and the Y data array will ALWAYS be the same length.
 
-Example Input 1:
-1
-1
+As before, you should round m and b to 4 decimal places, and use those for output.
+To do this, you can write:
+let mRounded = print(String.localizedStringWithFormat("%.4f", m))
+let bRounded = print(String.localizedStringWithFormat("%.4f", b))
+
+Your code will output the equation of the (rounded) line of best fit, in the format "y = \(mRounded) * x + \(bRounded)". 
+
+Example Input 1; this is for the data set (0, 0); (1, 1); (2, 2):
+0
 1
 2
+STOP
+0
 1
+2
 STOP
 
 Example Output 1:
-3
+y = 1.0000 * x + 0.0000
 
 
-Example Input 2:
-1
-3
-1
+Example Input 2; this is for the data set (0, 0); (1, 1); (2, 3):
+0
 1
 2
+STOP
+0
 1
 3
 STOP
 
 Example Output 2:
-4
+y = 1.5000 * x + -0.1667
 
 
 Example Input 3:
+-3
+-2
+-2.5
+1.2
+0
+2.1
+STOP
+2
 1
-1
-1
+1.3
+-1
+0
+-2.5
 STOP
 
 Example Output 3:
--1
 
 
-Example Input 4:
-STOP
-
-Example Output 4:
--1
-
-
-Example Input 5:
-1
-2
-3
-4
-STOP
-
-Example Output 5:
--1
