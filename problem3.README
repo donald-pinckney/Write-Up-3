@@ -118,6 +118,7 @@ Example Output 3:
 y = -0.7735 * x + -0.4081
 
 Example Input 4; This is ACTUAL data from the robot. The X data is time, and the Y data is angle of the robot spinning.
+You can go here for a plot of the data: https://raw.githubusercontent.com/donald-pinckney/Write-Up-3/master/plot.png
 The m value from the linear regression will be how many degrees the robot can spin per second:
 0.01
 0.02
