@@ -1,0 +1,63 @@
+# Problem 2: Array Balancing
+
+In this problem, you need to compute the "balance point" of an array of positive Ints.  The balance point is the index for which the sum of elements before the balance point equals the sum of elements including and after the balance point.
+
+For example, if the array is [1, 3, 1, 1, 2, 1, 3], then the balance point is index 4, since 1 + 3 + 1 + 1 = 6 = 2 + 1 + 3.  Note that not all arrays have balance points!
+
+The code to read in an array of Ints has already been written for you.  You need to write the code to compute the balance point.
+
+# Example Inputs and Outputs
+Your code will read in an array of integers, followed by a non-integer so the code knows when the array ends. This has already been done for you. Then, your code will compute the balance point, if there is one. Finally, your code will output either the balance point, or -1, if there is no balance point.
+
+Example Input 1:
+1
+1
+1
+2
+1
+STOP
+
+Example Output 1:
+3
+
+
+Example Input 2:
+1
+3
+1
+1
+2
+1
+3
+STOP
+
+Example Output 2:
+4
+
+
+Example Input 3:
+1
+1
+1
+STOP
+
+Example Output 3:
+-1
+
+
+Example Input 4:
+STOP
+
+Example Output 4:
+-1
+
+
+Example Input 5:
+1
+2
+3
+4
+STOP
+
+Example Output 5:
+-1
