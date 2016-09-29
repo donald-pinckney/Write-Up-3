@@ -12,8 +12,8 @@ For example, if the data points are: (0, 0); (1, 1); (2, 2), then we can actuall
 # How to Compute the Linear Regression
 
 I don't expect you to understand the math behind the linear regression, so I will just give you the equations for it.  However, you should understand 2 things: 
-1. Intuitively what the point of linear regression is.
-2. How to code the linear regression given the equations.
+1. Intuitively what the point of linear regression is
+2. How to code the linear regression given the equations
 
 So, recall that we have many ordered pair data points. These will be read into arrays. Let xData be the array containing all the x values of the data points, and let yData be the array containing all the y values of the data points. So, the first ordered pair would be: (xData[0], yData[0]). With this given data, our goal is to compute the best m and b for the line y = mx + b
 
