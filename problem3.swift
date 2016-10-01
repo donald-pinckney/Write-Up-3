@@ -56,8 +56,7 @@ b = yDataAvg - m * xDataAvg
 
 // Round m and b
 let mRounded = print(String.localizedStringWithFormat("%.4f", m))
-let bRounded = print(String.localizedStringWithFormat("%.4f", b))
-
+let bRounded = print(String.localizedStringWithFormat("%.4f", b)
 
 // Print y = m * x + b
 print("y = \(mRounded) * x + \(bRounded)")
