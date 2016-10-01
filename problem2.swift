@@ -17,7 +17,7 @@ for i in inputArray {
 if ( total % 2 == 0 ) && ( inputArray.count > 0 ) {
 	balanceTotal = total / 2
 
-	// Test each sum against total
+	// Test each sum against total and print array entry equal to the balance point, or zero if none exists
 	for j in 0..<inputArray.count {
 		testTotal = testTotal + inputArray[j]
 		if testTotal == balanceTotal {
