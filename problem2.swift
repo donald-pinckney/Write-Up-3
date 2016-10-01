@@ -16,11 +16,12 @@ for i in inputArray {
 // Check if a balance point exists
 if total % 2 == 0 {
 	balanceTotal = total / 2
+
 	// Test each sum against total
 	for j in 0..<inputArray.count {
 		testTotal = testTotal + inputArray[j]
 		if testTotal == balanceTotal {
-		print(j)
+		print(j+1)
 		break
 		}
 	}
