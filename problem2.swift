@@ -14,17 +14,17 @@ var balPoint = -1
 for checkIndex in 1 ..< inputArray.count {
 	//print(checkIndex) //For testing
 
-	var sum1 = 0
-	var sum2 = 0
+	var sum1: Double = 0
+	var sum2: Double = 0
 
 	//Adds all of the values before and after the possible balane point.
 	for currentIndex in 0 ..< inputArray.count {
 		//print(currentIndex) //For testing
 
 		if currentIndex < checkIndex {
-			sum1 += inputArray[currentIndex]
+			sum1 += Double(inputArray[currentIndex])
 		} else {
-			sum2 += inputArray[currentIndex]
+			sum2 += Double(inputArray[currentIndex])
 		}
 	}
 
