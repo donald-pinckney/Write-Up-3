@@ -54,5 +54,10 @@ m = (xyDataAvg - (xDataAvg * yDataAvg)) / (xSqDataAvg - pow(xDataAvg,2))
 var b: Double = 0
 b = yDataAvg - m * xDataAvg
 
+// Round m and b
+let mRounded = print(String.localizedStringWithFormat("%.4f", m))
+let bRounded = print(String.localizedStringWithFormat("%.4f", b))
+
+
 // Print y = m * x + b
-print("y = \(m) * x + \(b)")
+print("y = \(mRounded) * x + \(bRounded)")
