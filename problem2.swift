@@ -21,8 +21,10 @@ if total % 2 == 0 {
 	for j in 0..<inputArray.count {
 		testTotal = testTotal + inputArray[j]
 		if testTotal == balanceTotal {
-		print(j+1)
-		break
+			print(j+1)
+			break
+		} else if j == inputArray.count - 1 {
+			print(-1)
 		}
 	}
 } else {
