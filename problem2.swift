@@ -13,8 +13,8 @@ while let inputNum = Int(readLine()!) {
 for i in inputArray {
 	total = total + i 
 }
-// Check if a balance point exists
-if total % 2 == 0 {
+// Check if a balance point exists and inputs were given
+if ( total % 2 == 0 ) && ( inputArray.count > 0 ) {
 	balanceTotal = total / 2
 
 	// Test each sum against total
