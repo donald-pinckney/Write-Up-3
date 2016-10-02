@@ -16,47 +16,38 @@ while let inputNum = Double(readLine()!) {
 
 // Write your linear regression code here
 
-//average xData
+let count = xData.count
 var sumx: Double = 0
-for x in xData {
-	sumx += x
-}
-let avgx = sumx / Double(xData.count)
-
-//average yData
 var sumy: Double = 0
-for y in yData {
-	sumy += y
-}
-let avgy = sumy / Double(yData.count)
-
-//average xData^2 -> xDatasq
 var xDatasq: [Double] = []
 var sumxsq: Double = 0
-for index in 0..<xData.count {
-	xDatasq.append( pow(xData[index], 2.0) )
-}
-for xsq in xDatasq {
-	sumxsq += xsq
-}
-let avgxsq = sumxsq / Double(xDatasq.count)
-
-//average xData*yData -> xyData
 var xyData: [Double] = []
 var sumxy: Double = 0
-for index in 0..<xData.count {	
-	xyData.append(xData[index] + yData[index])
+
+//find xDatasq and xyData
+for index in 0..<count {
+	xDatasq.append( pow(xData[index], 2.0) )
+	xyData.append(xData[index] * yData[index])	//May need Double()
 }
-for xy in xyData {
-	sumxy += xy
+
+//find all sums 
+for index in 0..<count {
+	sumx += xData[index]
+	sumy += yData[index]
+	sumxsq += xDatasq[index]
+	sumxy += xyData[index]
 }
+ //find all averages
+let avgx = sumx / Double(xData.count)
+let avgy = sumy / Double(yData.count)
+let avgxsq = sumxsq / Double(xDatasq.count)
 let avgxy = sumxy / Double(xyData.count)
 
 //compute m
 let m = (avgxy - avgx * avgy) / (avgxsq - pow(avgx, 2.0)) 
 
 //compute b
-let b = avgy - m * avgx
+let b = avgy - (m * avgx)	
 
 //round to 4 decimals
 let mRounded = String.localizedStringWithFormat("%.4f", m)
