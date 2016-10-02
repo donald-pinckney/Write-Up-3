@@ -8,28 +8,30 @@ while let inputNum = Int(readLine()!) {
 
 // Write your balancing code here.
 
-//compute total sum (will become the right sum)
+//assign and compute total sum of array -> right sum
 var sum = 0	
 for index in 0..<inputArray.count {
 	sum += inputArray[index]
 }
 
-var leftSum = 0		//left sum 
+//assign left sum
+var leftSum = 0
 
-
+/*
+loop through array values
+add new value to leftSum and subtract from sum
+if sums = -> balance point
+if no balance point -> output -1
+*/
 test: while true {
 	for index in 0..<inputArray.count {
-		//adjust sums by adding and subtracting from 
-		//left and right respectively
 		sum -= inputArray[index]	
 		leftSum += inputArray[index]
-		//check to see if balance point has been reached
 		if sum == leftSum {
 			print(index + 1)
 			break test	//exit the infinite loop completely
 		}
 	}
-	//looped through the array without finding a balance point
 	print(-1)
 	break	//exit the infinite loop
 }
