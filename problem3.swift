@@ -23,6 +23,13 @@ for x in xData {
 }
 let avgx = sumx / Double(xData.count)
 
+//average yData
+var sumy: Double = 0
+for y in yData {
+	sumy += y
+}
+let avgy = sumy / Double(yData.count)
+
 //average xData^2 -> xDatasq
 var xDatasq: [Double] = []
 var sumxsq: Double = 0
@@ -34,17 +41,10 @@ for xsq in xDatasq {
 }
 let avgxsq = sumxsq / Double(xDatasq.count)
 
-//average yData
-var sumy: Double = 0
-for y in yData {
-	sumy += y
-}
-let avgy = sumy / Double(yData.count)
-
 //average xData*yData -> xyData
 var xyData: [Double] = []
 var sumxy: Double = 0
-for index in 0..<xyData.count {
+for index in 0..<xData.count {	
 	xyData.append(xData[index] + yData[index])
 }
 for xy in xyData {
