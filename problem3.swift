@@ -43,9 +43,26 @@ yAvg /= Double(xData.count)
 
 let xyAvg = (yAvg * xAvg)
 
+//square every x value sperately, THEN avg all values
+var xsq: [Double] = []
+for i in 0...(xData.count - 1){
+    xsq.append(pow (xData[i], 2))
+}
+
+var xsqAvg: Double = 0
+for i in 0...(xsq.count - 1){ //avg of all sqrd x values
+    xsqAvg += xsq[i]
+}
+xsqAvg /= Double(xsq.count)
+
+let xAvgsq = pow(xAvg, 2)
+
 print("xy Corresponging mult: \(xyData)")
 print("xy co Average: \(xyCoAvg)")
 print("x avg: \(xAvg)")
 print("y avg: \(yAvg)")
 print("xy avg (multipl): \(xyAvg)")
+print("each x sqr: \(xsq)")
+print("avg of ^: \(xsqAvg)")
+print("x avg squared: \(xAvgsq)")
 
