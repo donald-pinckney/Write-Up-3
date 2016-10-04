@@ -7,5 +7,29 @@ while let inputNum = Int(readLine()!) {
 }
 
 // Write your balancing code here.
+var balanceExists = false
+
+for i in 0..<(inputArray.count) {
+	if balanceExists == false {
+		var firstSum = 0
+		var secondSum = 0
+
+		for j in 0..<i {
+			firstSum = firstSum + inputArray[j]
+		}
+		for j in i..<(inputArray.count) {
+			secondSum = secondSum + inputArray[j]
+		}
+		
+		if firstSum == secondSum {
+			balanceExists = true
+			print(i)
+		}
+	}
+}
+
+if balanceExists == false {
+	print(-1)
+}
 
 
