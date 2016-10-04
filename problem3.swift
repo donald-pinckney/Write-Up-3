@@ -22,16 +22,30 @@ var xyData: [Double] = []
 for i in 0...(xData.count - 1){ //MULT xData value to corresponding yData, storing
         xyData.append(xData[i] * yData[i])
 }
+var xyCoAvg: Double = 0
 for i in 0...(xData.count - 1){ //storing avg of xyData in xyCoAvg
-        var xyCoAvg += xyData[i]
+        xyCoAvg += xyData[i]
 }
-var xyCoAvg /= xData.count
+xyCoAvg /= Double(xData.count)
 
 //Avg of xdat and ydat SEPERATELY, multiply avgs together
-var xAvg = 0
+var xAvg: Double = 0
 for i in 0...(xData.count - 1){
         xAvg += xData[i]
 }
+xAvg /= Double(xData.count)
 
-print("xy Corresponging mult: /(xyCoData)")
-print("xy co Average: /(xyCoAvg)")
+var yAvg: Double = 0
+for i in 0...(yData.count - 1){
+        yAvg += yData[i]
+}
+yAvg /= Double(xData.count)
+
+let xyAvg = (yAvg * xAvg)
+
+print("xy Corresponging mult: \(xyData)")
+print("xy co Average: \(xyCoAvg)")
+print("x avg: \(xAvg)")
+print("y avg: \(yAvg)")
+print("xy avg (multipl): \(xyAvg)")
+
