@@ -8,12 +8,12 @@ var found: Bool = false
 var i = 0
 
 while i < data.count{
+
 	if data[i] == wantToFind{
 		print(i)
 		found = true
 		break
 	}
-
 	i += 1
 }
 

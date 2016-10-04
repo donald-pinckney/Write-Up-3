@@ -3,15 +3,23 @@ Based on: https://en.wikipedia.org/wiki/Simple_linear_regression
 
 # Introduction
 
-In this problem, you will be writting a program to compute a linear regression of some data.  A linear regression is a line of best fit through some given data points.  This is an interesting and useful problem; in fact, App Programming does these sorts of regression problems frequently. For example, App Programming could use linear regression to predict match outcomes based on robot stats.
+In this problem, you will be writing a program to compute a linear regression of some data.  A linear regression is a line of best fit 
+through some given data points.  This is an interesting and useful problem; in fact, App Programming does these sorts of regression
+problems frequently. For example, App Programming could use linear regression to predict match outcomes based on robot stats.
 
-Specifically, you are given many order pair (x, y) data points, and you want to determine m and b so that the line y = mx + b is the line of best fit.
+Specifically, you are given many order pair (x, y) data points, and you want to determine m and b so that the line y = mx + b is the 
+line of best fit.
 
-For example, if the data points are: (0, 0); (1, 1); (2, 2), then we can actually have a perfect line of best fit: y = 1.0000 * x + 0.0000, since that line passes through all the data points. Most of the times there is not a perfect line of best fit. For example, if the data points are: (0, 0); (1, 1); (2, 3), then the line of best fit is actually y = 1.5000 * x - 0.1667. I would recommend using some graphing software or calculator to visualize this data set and line.
+For example, if the data points are: (0, 0); (1, 1); (2, 2), then we can actually have a perfect line of 
+best fit: y = 1.0000 * x + 0.0000, since that line passes through all the data points. Most of the times there is not a perfect line of
+best fit. For example, if the data points are: (0, 0); (1, 1); (2, 3), then the line of best fit is actually y = 1.5000 * x - 0.1667. 
+I would recommend using some graphing software or calculator to visualize this data set and line.
 
 # How to Compute the Linear Regression
 
-I don't expect you to understand the math behind the linear regression, so I will just give you the equations for it.  However, you should understand 2 things: 
+I don't expect you to understand the math behind the linear regression, so I will just give you the equations for it.  However, you 
+should understand 2 things: 
+
 1. Intuitively what the point of linear regression is
 2. How to code the linear regression given the equations
 

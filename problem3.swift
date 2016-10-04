@@ -14,7 +14,6 @@ while let inputNum = Double(readLine()!) {
     yData.append(inputNum)
 }
 
-
 // Write your linear regression code here
 
 //M
@@ -26,6 +25,12 @@ for i in 0...(xData.count - 1){ //MULT xData value to corresponding yData, stori
 var xyCoAvg: Double = 0
 for i in 0...(xData.count - 1){ //storing avg of xyData in xyCoAvg
 	xyCoAvg += xyData[i]
+
+        xyData.append(xData[i] * yData[i])
+}
+var xyCoAvg: Double = 0
+for i in 0...(xData.count - 1){ //storing avg of xyData in xyCoAvg
+        xyCoAvg += xyData[i]
 }
 xyCoAvg /= Double(xData.count)
 
@@ -38,7 +43,9 @@ xAvg /= Double(xData.count)
 
 var yAvg: Double = 0
 for i in 0...(yData.count - 1){
+<<<<<<< HEAD
 	yAvg += yData[i]
+
 }
 yAvg /= Double(xData.count)
 
@@ -66,5 +73,3 @@ print("xy avg (multipl): \(xyAvg)")
 print("each x sqr: \(xsq)")
 print("avg of ^: \(xsqAvg)")
 print("x avg squared: \(xAvgsq)")
-
-
