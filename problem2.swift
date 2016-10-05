@@ -24,8 +24,7 @@ for count1 in 0...(inputArray.count - 1){
                 var halfArray = 0
                 var counti = 0
 
-                //halfArray += inputArray[meh]
-                //until halfArray = inputSum/2
+                //until halfarray is lessn inputsum /2
                 while (halfArray < (inputSum / 2)){
                         halfArray += inputArray[counti]
                             counti += 1
