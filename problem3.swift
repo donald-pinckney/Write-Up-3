@@ -58,11 +58,18 @@ xsqAvg /= Double(xsq.count)
 
 let xAvgsq = pow(xAvg, 2)
 
-print("xy Corresponging mult: \(xyData)")
-print("xy co Average: \(xyCoAvg)")
-print("x avg: \(xAvg)")
-print("y avg: \(yAvg)")
-print("xy avg (multipl): \(xyAvg)")
-print("each x sqr: \(xsq)")
-print("avg of ^: \(xsqAvg)")
-print("x avg squared: \(xAvgsq)")
+//REAL MMMMM
+let m = (xyCoAvg - xyAvg) / (xsqAvg - xAvgsq)
+//BBBBBBBBB
+let b = yAvg - m * xAvg
+
+//THE BIG BOI GO PRINT AYYYYwait no I need to round it
+let mRounded = String.localizedStringWithFormat("%.4f", m)
+let bRounded = String.localizedStringWithFormat("%.4f", b)
+
+//THE BIG BOI AGAIN LETS PRINT THE OUTPUT AYYYY
+print("y = \(mRounded) * x + \(bRounded)")
+
+
+
+
